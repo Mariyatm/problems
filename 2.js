@@ -7,7 +7,7 @@ function calc(a, b,c){ // check if a=b=c
 		return 0;
 }
 
-function shift_ind(sh){ // calculate a points in sh
+function calculate_points(sh){ // calculate a points in sh
 	res = 0; 
 	for (t = 0; t < 3; t++){
 		res += calc(sh[0][t], sh[1][t], sh[2][t]);
@@ -25,7 +25,7 @@ function shift(sh,lines){ // build 3x3 by shift
 			shInd[i][j] = lines[j][(sh[j] + i) % lines[j].length];   
 		}
 	}
-	return shift_ind(shInd);
+	return calculate_points(shInd);
 }
 
 
